@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace Lab2
 {
-    public partial class LblWelcome : Form
+    public partial class CreateCustomer : Form
     {
-        public LblWelcome()
+        public CreateCustomer()
         {
             InitializeComponent();
         }
-
     }
 }
