@@ -17,5 +17,9 @@ namespace Lab2
             InitializeComponent();
         }
 
+        private void BtnCreateCustomer_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

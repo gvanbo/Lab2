@@ -44,6 +44,7 @@ namespace Lab2
             this.BtnCreateCustomer.TabIndex = 0;
             this.BtnCreateCustomer.Text = "Create New Customer";
             this.BtnCreateCustomer.UseVisualStyleBackColor = true;
+            this.BtnCreateCustomer.Click += new System.EventHandler(this.BtnCreateCustomer_Click);
             // 
             // BtnCheckRecords
             // 

@@ -36,7 +36,7 @@ namespace Lab2
             this.txtFName = new System.Windows.Forms.TextBox();
             this.txtLName = new System.Windows.Forms.TextBox();
             this.txtkWhUsed = new System.Windows.Forms.TextBox();
-            this.BtnCreate = new System.Windows.Forms.Button();
+            this.BtnSubmit = new System.Windows.Forms.Button();
             this.BtnReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -99,17 +99,18 @@ namespace Lab2
             this.txtkWhUsed.Size = new System.Drawing.Size(263, 29);
             this.txtkWhUsed.TabIndex = 6;
             // 
-            // BtnCreate
+            // BtnSubmit
             // 
-            this.BtnCreate.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.BtnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnCreate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BtnCreate.Location = new System.Drawing.Point(150, 276);
-            this.BtnCreate.Name = "BtnCreate";
-            this.BtnCreate.Size = new System.Drawing.Size(119, 34);
-            this.BtnCreate.TabIndex = 7;
-            this.BtnCreate.Text = "Create";
-            this.BtnCreate.UseVisualStyleBackColor = false;
+            this.BtnSubmit.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BtnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnSubmit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BtnSubmit.Location = new System.Drawing.Point(150, 276);
+            this.BtnSubmit.Name = "BtnSubmit";
+            this.BtnSubmit.Size = new System.Drawing.Size(119, 34);
+            this.BtnSubmit.TabIndex = 7;
+            this.BtnSubmit.Text = "Submit";
+            this.BtnSubmit.UseVisualStyleBackColor = false;
+            this.BtnSubmit.Click += new System.EventHandler(this.BtnCreate_Click);
             // 
             // BtnReset
             // 
@@ -122,6 +123,7 @@ namespace Lab2
             this.BtnReset.TabIndex = 8;
             this.BtnReset.Text = "Reset";
             this.BtnReset.UseVisualStyleBackColor = false;
+            this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // CreateCustomer
             // 
@@ -130,7 +132,7 @@ namespace Lab2
             this.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.ClientSize = new System.Drawing.Size(549, 360);
             this.Controls.Add(this.BtnReset);
-            this.Controls.Add(this.BtnCreate);
+            this.Controls.Add(this.BtnSubmit);
             this.Controls.Add(this.txtkWhUsed);
             this.Controls.Add(this.txtLName);
             this.Controls.Add(this.txtFName);
@@ -156,7 +158,7 @@ namespace Lab2
         private System.Windows.Forms.TextBox txtFName;
         private System.Windows.Forms.TextBox txtLName;
         private System.Windows.Forms.TextBox txtkWhUsed;
-        private System.Windows.Forms.Button BtnCreate;
+        private System.Windows.Forms.Button BtnSubmit;
         private System.Windows.Forms.Button BtnReset;
     }
 }
