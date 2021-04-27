@@ -19,7 +19,8 @@ namespace Lab2
 
         private void BtnCreateCustomer_Click(object sender, EventArgs e)
         {
-            
+            CreateCustomer displayCreateCustomer = new CreateCustomer();
+            displayCreateCustomer.ShowDialog();
         }
     }
 }

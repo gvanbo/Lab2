@@ -14,7 +14,6 @@ namespace Lab2
         private decimal kWhUsed;
         private const decimal adminFee = 12.00m;
         private const decimal kWhFee = 0.07m;
-        private decimal billAmount = 0m;
         private decimal totalBill;
 
         public Customer() { }
@@ -25,13 +24,13 @@ namespace Lab2
             lName = lastname;
             kWhUsed = kWhused;
             AccountNo++;
-            totalBill = adminFee + kWhUsed * kWhFee;
+
         }
 
-        
+        public void Calculate(int AccountNo, out decimal total)
+        {
+            total = adminFee + kWhUsed * kWhFee;
 
-        
-
-
+        }
     }
 }

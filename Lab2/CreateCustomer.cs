@@ -27,6 +27,8 @@ namespace Lab2
 
         private void BtnCreate_Click(object sender, EventArgs e)
         {
+            
+            
             string first = txtFName.Text;
             string last = txtLName.Text;
             decimal energy = decimal.Parse(txtkWhUsed.Text);
