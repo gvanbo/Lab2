@@ -10,12 +10,22 @@ using System.Windows.Forms;
 
 namespace Lab2
 {
-    public partial class Welcome : Form
+    public partial class LblWelcome : Form
     {
-        public Welcome()
+        public LblWelcome()
         {
             InitializeComponent();
         }
 
+        private void BtnCreateCustomer_Click(object sender, EventArgs e)
+        {
+            CreateCustomer displayCreateCustomer = new CreateCustomer();
+            displayCreateCustomer.ShowDialog();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
