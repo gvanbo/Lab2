@@ -102,7 +102,7 @@ namespace Lab2
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(263, 29);
             this.txtFName.TabIndex = 4;
-            this.txtFName.TextChanged += new System.EventHandler(this.button1_Click_1);
+
             // 
             // txtLName
             // 
@@ -150,7 +150,7 @@ namespace Lab2
             this.txtEnergyUsed.Name = "txtEnergyUsed";
             this.txtEnergyUsed.Size = new System.Drawing.Size(263, 29);
             this.txtEnergyUsed.TabIndex = 15;
-            this.txtEnergyUsed.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+
             // 
             // txtFullName
             // 
@@ -158,7 +158,7 @@ namespace Lab2
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(263, 29);
             this.txtFullName.TabIndex = 14;
-            this.txtFullName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+
             // 
             // txtAccountNo
             // 
@@ -166,7 +166,7 @@ namespace Lab2
             this.txtAccountNo.Name = "txtAccountNo";
             this.txtAccountNo.Size = new System.Drawing.Size(263, 29);
             this.txtAccountNo.TabIndex = 13;
-            this.txtAccountNo.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+
             // 
             // label1
             // 
@@ -176,7 +176,7 @@ namespace Lab2
             this.label1.Size = new System.Drawing.Size(83, 19);
             this.label1.TabIndex = 12;
             this.label1.Text = "kWh Used:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+
             // 
             // lblFullName
             // 
@@ -186,7 +186,7 @@ namespace Lab2
             this.lblFullName.Size = new System.Drawing.Size(83, 19);
             this.lblFullName.TabIndex = 11;
             this.lblFullName.Text = "Full Name:";
-            this.lblFullName.Click += new System.EventHandler(this.label2_Click);
+
             // 
             // lblResults
             // 

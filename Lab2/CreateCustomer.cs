@@ -34,7 +34,7 @@ namespace Lab2
 
         private void BtnCreate_Click(object sender, EventArgs e)
         {
-
+            
             NewCustomer();
             FieldReset();
 
@@ -63,7 +63,8 @@ namespace Lab2
             kWhUsed.Add(energy);
             BillTotal.Add(totalBill);
 
-
+            //Display Cumulative Totals
+            DisplayTotals();
         }
 
 
@@ -75,66 +76,76 @@ namespace Lab2
             txtkWhUsed.Text = "";
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             int x = int.Parse(txtAccountNo.Text);
 
-            txtFullName.Text = $"{FName[x-1]} {LName[x-1]}";
-            txtkWhUsed.Text = kWhUsed[x-1].ToString();
-            txtBillTotal.Text = BillTotal[x-1].ToString();
+            txtFullName.Text = $"{FName[x - 1]} {LName[x - 1]}";
+            txtEnergyUsed.Text = kWhUsed[x - 1].ToString();
+            txtBillTotal.Text = BillTotal[x - 1].ToString();
 
         }
 
         private void DisplayTotals()
         {
-            txtTotalCustomers.Text = "Not Ready Yet";
-            txtTotalkWh.Text = "Take Info";
-            txtEnergyUsed.Text = "Energy Info";
+            int totalCustomers = GetTotalCustomers();
+            decimal totalK = GetTotalkWh();
+            decimal billAvg = GetAverageBill();
+            decimal avgKWH = GetAveragekWh();
+            txtTotalCustomers.Text = totalCustomers.ToString();
+            txtTotalkWh.Text = totalK.ToString();
+            txtAverageBill.Text = billAvg.ToString("c");
+            txtAveragekWh.Text = avgKWH.ToString();
         }
+
+        private int GetTotalCustomers()
+        {
+            int counter = 0;
+            foreach (int item in Account)
+            {
+                counter++;
+            }
+            return counter;
+        }
+
+        private decimal GetTotalkWh()
+        {
+            decimal listTotalkWh = 0;
+            foreach (var item in kWhUsed)
+            {
+                listTotalkWh += item;
+            }
+            return listTotalkWh;
+        }
+
+        private decimal GetAverageBill()
+        {
+            decimal allBillsTotal = 0;
+            decimal countBills = 0;
+            foreach (var item in BillTotal)
+            {
+                countBills++;
+                allBillsTotal += item;
+            }
+            decimal averageBill = allBillsTotal / countBills;
+            return averageBill;
+        }
+
+        private decimal GetAveragekWh()
+        {
+            decimal count = 0;
+            decimal energy = 0;
+            foreach (var item in kWhUsed)
+            {
+                count++;
+                energy += item;
+            }
+            decimal averagekWh = energy / count;
+            return averagekWh;
+        }
+
+
+
+
     }
 }
