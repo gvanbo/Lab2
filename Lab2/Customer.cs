@@ -28,10 +28,10 @@ namespace Lab2
 
         }
 
-        
+
 
 
     }
-        
+
 
 }
