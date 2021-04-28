@@ -142,6 +142,7 @@ namespace Lab2
             }
             decimal averagekWh = energy / count;
             return averagekWh;
+
         }
 
 
