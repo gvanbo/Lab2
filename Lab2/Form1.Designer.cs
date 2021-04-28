@@ -75,6 +75,7 @@ namespace Lab2
             this.BtnExit.TabIndex = 3;
             this.BtnExit.Text = "Exit";
             this.BtnExit.UseVisualStyleBackColor = true;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // LblWelcome
             // 

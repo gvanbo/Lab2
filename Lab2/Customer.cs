@@ -12,9 +12,9 @@ namespace Lab2
         private string fName;
         private string lName;
         private decimal kWhUsed;
-        private const decimal adminFee = 12.00m;
-        private const decimal kWhFee = 0.07m;
-        private decimal totalBill;
+        public const decimal adminFee = 12.00m;
+        public const decimal kWhFee = 0.07m;
+        private decimal BillAmount;
 
         public Customer() { }
 
@@ -24,13 +24,14 @@ namespace Lab2
             lName = lastname;
             kWhUsed = kWhused;
             AccountNo++;
+            BillAmount = adminFee + kWhUsed * kWhFee;
 
         }
 
-        public void Calculate(int AccountNo, out decimal total)
-        {
-            total = adminFee + kWhUsed * kWhFee;
+        
 
-        }
+
     }
+        
+
 }

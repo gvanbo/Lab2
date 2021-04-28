@@ -22,5 +22,10 @@ namespace Lab2
             CreateCustomer displayCreateCustomer = new CreateCustomer();
             displayCreateCustomer.ShowDialog();
         }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
