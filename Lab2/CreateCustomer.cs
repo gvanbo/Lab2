@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
+
 namespace Lab2
+
 {
     public partial class CreateCustomer : Form
     {
@@ -34,10 +36,8 @@ namespace Lab2
 
         private void BtnCreate_Click(object sender, EventArgs e)
         {
-            
             NewCustomer();
             FieldReset();
-
         }
 
         public void NewCustomer()
@@ -48,14 +48,14 @@ namespace Lab2
             AccountNo++;
             int actNumber = AccountNo;
 
-            decimal totalBill = energy * kWhFee + adminFee; 
+            decimal totalBill = energy * kWhFee + adminFee;
 
             Customer cust = new Customer(first, last, energy);
             MessageBox.Show($"New Customer Created: \n{first} {last}. \n" +
                 $"Total Bill Amount is: {totalBill}\n" +
                 $"Customer Account No: {actNumber}");
-            
-            
+
+
             // Add customer information to lists
             Account.Add(actNumber);
             FName.Add(first);
@@ -82,7 +82,7 @@ namespace Lab2
 
             txtFullName.Text = $"{FName[x - 1]} {LName[x - 1]}";
             txtEnergyUsed.Text = kWhUsed[x - 1].ToString();
-            txtBillTotal.Text = BillTotal[x - 1].ToString();
+            txtBillTotal.Text = BillTotal[x - 1].ToString("c");
 
         }
 
@@ -98,7 +98,7 @@ namespace Lab2
             txtAveragekWh.Text = avgKWH.ToString();
         }
 
-        private int GetTotalCustomers()
+        public int GetTotalCustomers()
         {
             int counter = 0;
             foreach (int item in Account)
@@ -108,7 +108,7 @@ namespace Lab2
             return counter;
         }
 
-        private decimal GetTotalkWh()
+        public decimal GetTotalkWh()
         {
             decimal listTotalkWh = 0;
             foreach (var item in kWhUsed)

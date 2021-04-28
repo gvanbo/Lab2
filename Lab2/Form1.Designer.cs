@@ -30,7 +30,6 @@ namespace Lab2
         private void InitializeComponent()
         {
             this.BtnCreateCustomer = new System.Windows.Forms.Button();
-            this.BtnCheckRecords = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -46,16 +45,6 @@ namespace Lab2
             this.BtnCreateCustomer.UseVisualStyleBackColor = true;
             this.BtnCreateCustomer.Click += new System.EventHandler(this.BtnCreateCustomer_Click);
             // 
-            // BtnCheckRecords
-            // 
-            this.BtnCheckRecords.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnCheckRecords.Location = new System.Drawing.Point(68, 191);
-            this.BtnCheckRecords.Name = "BtnCheckRecords";
-            this.BtnCheckRecords.Size = new System.Drawing.Size(135, 48);
-            this.BtnCheckRecords.TabIndex = 1;
-            this.BtnCheckRecords.Text = "Check Records";
-            this.BtnCheckRecords.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -69,7 +58,7 @@ namespace Lab2
             // BtnExit
             // 
             this.BtnExit.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnExit.Location = new System.Drawing.Point(68, 270);
+            this.BtnExit.Location = new System.Drawing.Point(68, 190);
             this.BtnExit.Name = "BtnExit";
             this.BtnExit.Size = new System.Drawing.Size(135, 48);
             this.BtnExit.TabIndex = 3;
@@ -82,10 +71,9 @@ namespace Lab2
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.ClientSize = new System.Drawing.Size(284, 381);
+            this.ClientSize = new System.Drawing.Size(278, 381);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.BtnCheckRecords);
             this.Controls.Add(this.BtnCreateCustomer);
             this.Font = new System.Drawing.Font("Verdana", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.Name = "LblWelcome";
@@ -98,7 +86,6 @@ namespace Lab2
         #endregion
 
         private System.Windows.Forms.Button BtnCreateCustomer;
-        private System.Windows.Forms.Button BtnCheckRecords;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnExit;
     }
